@@ -1,0 +1,76 @@
+@import "variables";
+@import "typography";
+
+footer {
+  background-color: #eaefed;
+  padding-top: 50px;
+  color: $text-color;
+  position: relative;
+
+  li {
+    cursor: pointer;
+  }
+
+  .footer-shape {
+    position: absolute;
+    top: -25%;
+    left: 5%;
+
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  .website {
+    li {
+      margin-top: 8px;
+    }
+  }
+
+  .logo {
+    width: 50%;
+    margin: auto;
+    margin-bottom: 20px;
+
+    .photo {
+      width: 100%;
+      height: 100px;
+      margin: auto;
+
+      img {
+        width: 100%;
+        // height: 100%;
+      }
+    }
+
+    ul {
+      width: 100%;
+      margin: auto;
+    }
+
+    @media (max-width: 991px) {
+      margin: initial;
+      margin-bottom: 20px;
+    }
+  }
+
+  .copy {
+    background-color: #fff;
+    text-align: center;
+    font-size: 14px;
+    span {
+      color: $pink !important;
+    }
+  }
+}
+
+.mobile {
+  background-color: $light-color !important;
+  padding-top: initial !important;
+
+  .copy {
+    background-color: $light-color;
+    width: 80%;
+    margin: auto;
+  }
+}

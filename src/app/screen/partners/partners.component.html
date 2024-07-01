@@ -1,0 +1,25 @@
+<app-head-slider
+  [data]="{photo:'./assets/images/conceptual-hand-writing-showing-our-services-concept-meaning-occupation-function-serving-intangible-products-male-wear-160644151.webp',title:'services',description:'We help your business achieve real digital transformation with enterprise-level web development, web design, and migration services.'}"></app-head-slider>
+
+<div class="container">
+  <div class="row mt-4">
+
+    <div class="col-lg-3 col-md-6 col-sm-12 p-0" *ngFor="let item of [{},{},{},{},{},{},{},{},{},{},{},{}]">
+      <div class="client">
+        <div class="photo">
+          <img src="./assets/images/about.jpg" alt="">
+        </div>
+        <div class="content">
+          <p>
+            We help your business achieve real digital transformation with enterprise-level web development, web design,
+            and migration services.
+          </p>
+          <h6 class="mt-3">Moahmed Ahmed Ali.</h6>
+          <h6>Software Engineer</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-contact-us-form></app-contact-us-form>

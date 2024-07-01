@@ -1,0 +1,30 @@
+$breakpoints: (
+  small: 576px,
+  medium: 768px,
+  large: 992px,
+  x-large: 1200px,
+);
+
+// Media Query Minimum Width
+@mixin min-width-media($breakpoint) {
+  $min-breakpoint-value: map-get($breakpoints, $breakpoint);
+  @media screen and (min-width: $min-breakpoint-value) {
+    @content;
+  }
+}
+
+// Media Query Maximum Width
+@mixin max-width-media($breakpoint) {
+  $max-breakpoint-value: map-get($breakpoints, $breakpoint);
+  @media screen and (max-width: $max-breakpoint-value) {
+    @content;
+  }
+}
+
+// Hide Div Scrollbar
+@mixin hideScrollbar {
+  &::-webkit-scrollbar {
+    width: 0 !important;
+    display: none !important;
+  }
+}

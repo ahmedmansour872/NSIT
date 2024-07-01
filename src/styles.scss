@@ -1,0 +1,41 @@
+@import "reset";
+@import 'assets/files/animate.min.css';
+:root {
+  --heading-font-family-en: "Geologica", sans-serif;
+  --paragraph-font-family-en: "Geologica", sans-serif;
+
+  --heading-font-family-ar: "Tajawal", sans-serif;
+  --paragraph-font-family-ar: "Tajawal", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font-family-en);
+}
+
+p {
+  font-family: var(--paragraph-font-family-en);
+}
+
+[lang="ar"] {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--heading-font-family-ar);
+  }
+
+  p {
+    font-family: var(--paragraph-font-family-ar);
+  }
+
+  li {
+    font-family: var(--paragraph-font-family-ar);
+  }
+}

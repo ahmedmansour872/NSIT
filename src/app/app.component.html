@@ -1,0 +1,13 @@
+<div [dir]="textDirection | async" [attr.lang]="currentLang">
+  <router-outlet></router-outlet>
+</div>
+<ngx-spinner
+  [disableAnimation]="true"
+  bdColor="rgba(0, 0, 0, 1)"
+  size="large"
+  color="#fff"
+  type="square-jelly-box"
+  [fullScreen]="true"
+>
+  <span class="loader"></span>
+</ngx-spinner>

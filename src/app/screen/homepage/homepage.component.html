@@ -1,0 +1,51 @@
+<app-head></app-head>
+<div class="container">
+  <section class="about my-4">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="photo">
+          <img src="assets/images/about.jpg" alt="">
+        </div>
+      </div>
+      <div class="col-lg-6 d-flex justify-content-center flex-column">
+        <div>
+          <h2>About Us</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi voluptates eaque facere distinctio deleniti
+            ducimus in libero aperiam porro quis odit dolorum consequatur et, voluptatibus deserunt voluptas culpa.
+            Totam,
+            doloremque?
+          </p>
+          <a routerLink="/about" class="see-more">See more</a>
+        </div>
+      </div>
+    </div>
+    <img src="" alt="">
+  </section>
+</div>
+
+<div class="text-center my-4">
+  <h2 class="mu-4">Our Partners</h2>
+  <app-partner></app-partner>
+</div>
+
+<section class="services mt-4">
+  <div class="overlay"></div>
+  <div class="container">
+    <h2>OUR SERVICES</h2>
+    <p>WE PROVIDE A WIDE RANGE OF CAREFULLY CRAFTED SERVICES THAT CATER TO YOUR BUSINESS NEEDS. </p>
+    <div class="row">
+      <div class="col-lg-4 col-md-6" *ngFor="let item of [{},{},{},{},{},{}]">
+        <div class="cart">
+          <div>
+            <h4> Wireless Survey and Site Survey</h4>
+            <p>Article: Comprehensive Wireless and Site Surveys for Optimal Network Performance</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<app-contact-us-form></app-contact-us-form>

@@ -1,0 +1,24 @@
+{
+  "header": {
+    "english": "انجليزي",
+    "arabic": "عربي",
+    "home": "الرئيسية",
+    "aboutus": "معلومات عنا",
+    "services": "الخدمات",
+    "partners": "الشهادات والشراكات",
+    "contactus": "تواصل معنا"
+  },
+  "footer": {
+    "WEBSITE_TITLE": "الموقع الإلكتروني",
+    "TERMS_OF_USE": "شروط الاستخدام",
+    "PRIVACY_POLICY": "سياسة الخصوصية",
+    "COPYRIGHT_POLICY": "سياسة حقوق النشر",
+    "SUPPORT": "الدعم",
+    "home": "الرئيسية",
+    "aboutus": "معلومات عنا",
+    "services": "الخدمات",
+    "partnets": "الشهادات والشراكات",
+    "contactus": "تواصل معنا",
+    "COPYRIGHT_TEXT": "حقوق النشر © 2024 يونيفيرت. كل الحقوق محفوظة "
+  }
+}

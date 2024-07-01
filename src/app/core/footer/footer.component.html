@@ -1,0 +1,39 @@
+<footer [class.mobile]="screenWidth < 767">
+  <div class="container" *ngIf="screenWidth > 767">
+    <div class="row">
+      <div class="col-lg-3 col-md-6">
+        <h3 class="title mb-3">{{ "footer.WEBSITE_TITLE" | translate }}</h3>
+        <ul class="p-0 website">
+          <li>{{ "footer.TERMS_OF_USE" | translate }}</li>
+          <li>{{ "footer.PRIVACY_POLICY" | translate }}</li>
+          <li>{{ "footer.COPYRIGHT_POLICY" | translate }}</li>
+          <li>{{ "footer.SUPPORT" | translate }}</li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <p class="title mb-3">{{ "footer.services" | translate }}</p>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <p class="title mb-3" routerLink="/home">{{ "footer.home" | translate }}</p>
+        <ul class="p-0 website">
+          <li routerLink="/about-us"> {{ "footer.aboutus" | translate }}</li>
+          <li routerLink="/services">{{ "footer.services" | translate }}</li>
+          <li routerLink="/partners">{{ "footer.contactus" | translate }}</li>
+          <li routerLink="/contact-us">{{ "footer.partners" | translate }}</li>
+        </ul>
+      </div>
+
+
+      <div class="col-lg-3 col-md-6">
+        <div class="logo">
+          <div class="photo">
+            <img src="assets/images/logo.webp" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="copy py-3">
+    {{ "footer.COPYRIGHT_TEXT" | translate }}
+  </div>
+</footer>

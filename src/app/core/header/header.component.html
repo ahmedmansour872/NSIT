@@ -1,0 +1,167 @@
+<nav class="navbar navbar-expand-lg" *ngIf="screenWidth > 991" [class.fixed-top]="screenheight > 800">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/home">
+      <img src="assets/images/logo.webp" alt="" srcset="" />
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse d-flex align-items-center" [ngStyle]="{
+        'justify-content': chosenLanguage === 'ar' ? 'start' : 'end'
+      }" id="navbarSupportedContent">
+      <ul class="navbar-nav mb-2 mb-lg-0 align-items-center">
+        <li class="nav-item" routerLink="/home">
+          <a class="nav-link" aria-current="page">{{
+            "header.home" | translate }}</a>
+        </li>
+        <li class="nav-item" routerLink="/about-us">
+          <a class="nav-link" aria-current="page">{{
+            "header.aboutus" | translate }}</a>
+        </li>
+        <li class="nav-item" routerLink="/services">
+          <a class="nav-link" aria-current="page">{{
+            "header.services" | translate }}</a>
+        </li>
+        <li class="nav-item" routerLink="/partners">
+          <a class="nav-link" aria-current="page">{{
+            "header.partners" | translate }}</a>
+        </li>
+        <li class="nav-item" routerLink="/contact-us">
+          <a class="nav-link" aria-current="page">{{
+            "header.contactus" | translate }}</a>
+        </li>
+
+        <li class="nav-item">
+          <div class="language">
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <img src="assets/images/Component 254 – 1.svg" width="30px" alt="" />
+              </button>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" role="button" (click)="changeLang('en')">{{ "header.english" | translate
+                    }}</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" role="button" (click)="changeLang('ar')">{{ "header.arabic" | translate
+                    }}</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<nav class="navbar nav-mobile navbar-expand-lg" [class.navbar-transparent]="!color" [class.fixed-top]="!color"
+  [ngStyle]="{ 'background-color': !color ? 'transparent' : '#000' }" [style.overflow]="color ? 'auto' : 'unset'"
+  *ngIf="screenWidth < 991">
+  <div class="p-4 h-100">
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+      aria-label="Toggle navigation" (click)="hideMobileMenu()" [attr.aria-expanded]="color ? 'true' : 'false'"
+      aria-controls="navbarNav">
+      <i class="material-icons toggle-menu" *ngIf="!color"
+        style="color: white; background-color: black; padding: 5px">menu</i>
+    </button>
+    <div class="lang-select" *ngIf="color">
+      <div class="d-flex align-items-center justify-content-center">
+        <div class="dropdown">
+          <button class="btn btn-lang-toggle dropdown-toggle" type="button" data-bs-toggle="dropdown"
+            aria-expanded="false" style="padding: 0 10px; height: 23px">
+            <i class="material-icons">language</i>
+          </button>
+          <ul class="dropdown-menu" [ngStyle]="{
+              'text-align': chosenLanguage === 'Arabic' ? 'start' : 'revert '
+            }">
+            <li (click)="changeLang('en')">
+              <a class="dropdown-item">{{ "header.english" | translate }}</a>
+            </li>
+            <li (click)="changeLang('ar')">
+              <a class="dropdown-item">{{ "header.arabic" | translate }}</a>
+            </li>
+          </ul>
+        </div>
+        <svg *ngIf="color" id="Component_147_46" data-name="Component 147 – 46" xmlns="http://www.w3.org/2000/svg"
+          width="23.335" height="23.335" viewBox="0 0 23.335 23.335" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation" (click)="hideMobileMenu()" [attr.aria-expanded]="color ? 'true' : 'false'"
+          aria-controls="navbarNav" style="width: 20px">
+          <rect id="Rectangle_6847" data-name="Rectangle 6847" width="29" height="4" rx="2"
+            transform="translate(2.828) rotate(45)" fill="#ffffff" />
+          <rect id="Rectangle_6848" data-name="Rectangle 6848" width="3" height="4" rx="1.5"
+            transform="translate(10.167 10)" fill="#ffffff" />
+          <rect id="Rectangle_6849" data-name="Rectangle 6849" width="29" height="4" rx="2"
+            transform="translate(0 20.506) rotate(-45)" fill="#ffffff" />
+        </svg>
+      </div>
+
+      <img *ngIf="color" (click)="hideMobileMenu()" src="assets/images/logo.webp" alt="" style="width: 150px"
+        srcset="" />
+    </div>
+    <div class="collapse navbar-collapse" [ngClass]="{ show: color }" id="navbarSupportedContent" data-toggle="collapse"
+      data-target=".navbar-collapse">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 p-0" [class.invisible]="!color">
+        <li class="nav-item">
+          <a class="nav-link active" (click)="hideMobileMenu()" aria-current="page">{{ "header.home" |
+            translate }}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="hideMobileMenu()">
+            {{ "header.aboutus" | translate }}
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" role="button" (click)="hideMobileMenu()">
+            {{ "header.services" | translate }}
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" role="button" (click)="hideMobileMenu()">
+            {{ "header.partnets" | translate }}
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" (click)="hideMobileMenu()">{{ "header.contactus" | translate
+            }}</a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer" *ngIf="color">
+      <div class="logo">
+        <ul class="p-0 mt-3 d-flex justify-content-center gap-3 align-items-center">
+          <li>
+            <svg style="width: 20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="Facebook">
+              <path fill="#7fb283" fill-rule="evenodd"
+                d="M12 5.5H9v-2a1 1 0 0 1 1-1h1V0H9a3 3 0 0 0-3 3v2.5H4V8h2v8h3V8h2l1-2.5z" clip-rule="evenodd"
+                class="color1976d2 svgShape"></path>
+            </svg>
+          </li>
+          <li>
+            <svg style="width: 20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="Twitter">
+              <path fill="#7fb283"
+                d="M16 3.539a6.839 6.839 0 0 1-1.89.518 3.262 3.262 0 0 0 1.443-1.813 6.555 6.555 0 0 1-2.08.794 3.28 3.28 0 0 0-5.674 2.243c0 .26.022.51.076.748a9.284 9.284 0 0 1-6.761-3.431 3.285 3.285 0 0 0 1.008 4.384A3.24 3.24 0 0 1 .64 6.578v.036a3.295 3.295 0 0 0 2.628 3.223 3.274 3.274 0 0 1-.86.108 2.9 2.9 0 0 1-.621-.056 3.311 3.311 0 0 0 3.065 2.285 6.59 6.59 0 0 1-4.067 1.399c-.269 0-.527-.012-.785-.045A9.234 9.234 0 0 0 5.032 15c6.036 0 9.336-5 9.336-9.334 0-.145-.005-.285-.012-.424A6.544 6.544 0 0 0 16 3.539z"
+                class="color03a9f4 svgShape"></path>
+            </svg>
+          </li>
+          <li>
+            <svg style="width: 20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" id="Google">
+              <path
+                d="M896 786h725q12 67 12 128 0 217-91 387.5T1282.5 1568 896 1664q-157 0-299-60.5T352 1440t-163.5-245T128 896t60.5-299T352 352t245-163.5T896 128q300 0 515 201l-209 201q-123-119-306-119-129 0-238.5 65T484 652.5 420 896t64 243.5T657.5 1316t238.5 65q87 0 160-24t120-60 82-82 51.5-87 22.5-78H896V786z"
+                fill="#7fb283" class="color000000 svgShape"></path>
+            </svg>
+          </li>
+        </ul>
+      </div>
+      <div class="copy py-3">
+        Copyright © 2024 NSIT. All Rights Reserved
+
+      </div>
+    </div>
+  </div>
+</nav>
