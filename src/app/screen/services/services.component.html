@@ -2,26 +2,20 @@
   [data]="{photo:'./assets/images/conceptual-hand-writing-showing-our-services-concept-meaning-occupation-function-serving-intangible-products-male-wear-160644151.webp',title:'services',description:'We help your business achieve real digital transformation with enterprise-level web development, web design, and migration services.'}"></app-head-slider>
 <div class="container">
   <ul>
-    <li *ngFor="let item of [{},{},{},{},{},{},{},{}];let e=even;let i=index" class="item wow mt-5"
+    <li *ngFor="let item of allServices;let e=even;let i=index" class="item wow mt-5"
       [ngClass]="{'bounceInRight':!e,'bounceInLeft':e}" [routerLink]="'/service/'+(i+1)">
 
       <ng-container *ngIf="e; else elseBlock">
         <div class="row">
           <div class="col-lg-6 col-md-12">
             <div class="photo">
-              <img src="assets/images/about.jpg" alt="">
+              <img [src]="item?.img" alt="">
             </div>
           </div>
           <div class="col-lg-6 col-md-12 pe-5">
-            <h2>Wireless Survey and Site Survey</h2>
+            <h2>{{item.title}}</h2>
             <p>
-              Article: Comprehensive Wireless and Site Surveys for Optimal Network Performance
-              In today's digital age, a robust and reliable wireless network is crucial for business operations. Our
-              wireless survey and site survey services ensure your wireless network is optimized for performance,
-              coverage, and security. We use advanced tools to assess your site, identify potential interference, and
-              recommend the best placement for access points. Whether you are setting up a new network or optimizing an
-              existing one, our detailed surveys will provide the insights needed to ensure seamless connectivity and
-              productivity.
+              {{item.description}}
             </p>
           </div>
         </div>
@@ -29,20 +23,14 @@
       <ng-template #elseBlock>
         <div class="row">
           <div class="col-lg-6 col-md-12 ps-5">
-            <h2>Wireless Survey and Site Survey</h2>
+            <h2>{{item.title}}</h2>
             <p>
-              Article: Comprehensive Wireless and Site Surveys for Optimal Network Performance
-              In today's digital age, a robust and reliable wireless network is crucial for business operations. Our
-              wireless survey and site survey services ensure your wireless network is optimized for performance,
-              coverage, and security. We use advanced tools to assess your site, identify potential interference, and
-              recommend the best placement for access points. Whether you are setting up a new network or optimizing an
-              existing one, our detailed surveys will provide the insights needed to ensure seamless connectivity and
-              productivity.
+              {{item.description}}
             </p>
           </div>
           <div class="col-lg-6 col-md-12">
             <div class="photo">
-              <img src="assets/images/about.jpg" alt="">
+              <img [src]="item?.img" alt="">
             </div>
           </div>
         </div>

@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg" *ngIf="screenWidth > 991" [class.fixed-top]="screenheight > 800">
   <div class="container">
     <a class="navbar-brand" routerLink="/home">
-      <img src="assets/images/logo.webp" alt="" srcset="" />
+      <img src="assets/images/logo.png" alt="" srcset="" />
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -99,34 +99,34 @@
         </svg>
       </div>
 
-      <img *ngIf="color" (click)="hideMobileMenu()" src="assets/images/logo.webp" alt="" style="width: 150px"
+      <img *ngIf="color" (click)="hideMobileMenu()" src="assets/images/logo.png" alt="" style="width: 150px"
         srcset="" />
     </div>
     <div class="collapse navbar-collapse" [ngClass]="{ show: color }" id="navbarSupportedContent" data-toggle="collapse"
       data-target=".navbar-collapse">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 p-0" [class.invisible]="!color">
-        <li class="nav-item">
+        <li class="nav-item" routerLink="/home">
           <a class="nav-link active" (click)="hideMobileMenu()" aria-current="page">{{ "header.home" |
             translate }}</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" routerLink="/about-us">
           <a class="nav-link" (click)="hideMobileMenu()">
             {{ "header.aboutus" | translate }}
           </a>
         </li>
 
-        <li class="nav-item">
+        <li class="nav-item" routerLink="/services">
           <a class="nav-link" role="button" (click)="hideMobileMenu()">
             {{ "header.services" | translate }}
           </a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" routerLink="/partners">
           <a class="nav-link" role="button" (click)="hideMobileMenu()">
             {{ "header.partnets" | translate }}
           </a>
         </li>
 
-        <li class="nav-item">
+        <li class="nav-item" routerLink="/contact-us">
           <a class="nav-link" (click)="hideMobileMenu()">{{ "header.contactus" | translate
             }}</a>
         </li>

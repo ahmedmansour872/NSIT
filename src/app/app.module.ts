@@ -61,4 +61,4 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
   ],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

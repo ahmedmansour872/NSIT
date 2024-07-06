@@ -2,6 +2,17 @@
   text-decoration: underline;
 }
 
+.about {
+  .photo {
+    overflow: hidden;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+  }
+}
+
 .services {
   background-image: url('../../../assets/images/about.jpg');
   background-repeat: no-repeat;
@@ -18,7 +29,8 @@
     width: 100%;
     height: 100%;
   }
-  .container{
+
+  .container {
     position: relative;
     z-index: 1;
   }

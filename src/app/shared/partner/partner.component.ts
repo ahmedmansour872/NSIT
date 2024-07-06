@@ -7,10 +7,15 @@ import { Component } from '@angular/core';
 })
 export class PartnerComponent {
   data: any[] = [
-    { image: 'assets/images/about.jpg' },
-    { image: 'assets/images/about.jpg' },
-    { image: 'assets/images/about.jpg' },
-    { image: 'assets/images/about.jpg' }
+    { image: 'assets/images/oem/oem1.png' },
+    { image: 'assets/images/oem/oem2.png' },
+    { image: 'assets/images/oem/oem3.png' },
+    { image: 'assets/images/oem/oem4.png' },
+    { image: 'assets/images/oem/oem5.png' },
+    { image: 'assets/images/oem/oem6.png' },
+    { image: 'assets/images/oem/oem7.png' },
+    { image: 'assets/images/oem/oem8.png' },
+    { image: 'assets/images/oem/oem9.png' }
   ]
   owlOptions = {
     loop: true,

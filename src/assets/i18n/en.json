@@ -5,7 +5,7 @@
     "home": "Home",
     "aboutus": "About Us",
     "services": "Services",
-    "partners": "ORM",
+    "partners": "Supported Vendors",
     "contactus": "Contact Us"
   },
   "footer": {
@@ -17,7 +17,7 @@
     "home": "Home",
     "aboutus": "About Us",
     "services": "Services",
-    "partners": "ORM",
+    "partners": "Supported Vendors",
     "contactus": "Contact Us",
     "COPYRIGHT_TEXT": "Copyright © 2024 NSIT. All Rights Reserved"
   }

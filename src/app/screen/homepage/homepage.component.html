@@ -4,17 +4,21 @@
     <div class="row">
       <div class="col-lg-6">
         <div class="photo">
-          <img src="assets/images/about.jpg" alt="">
+          <img src="assets/images/photo-about.png" alt="">
         </div>
       </div>
       <div class="col-lg-6 d-flex justify-content-center flex-column">
         <div>
           <h2>About Us</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi voluptates eaque facere distinctio deleniti
-            ducimus in libero aperiam porro quis odit dolorum consequatur et, voluptatibus deserunt voluptas culpa.
-            Totam,
-            doloremque?
+            Welcome to NetServeIT, where innovation meets reliability.Our journey began with a vision to transform
+            technology into a catalyst for business success. Over the years, we have grown into a team of dedicated
+            professionals, each bringing unique expertise and a shared commitment to excellence.
+            Our mission is simple: to empower businesses with cutting-edge technology solutions tailored to their
+            specific needs. We believe in the power of technology to drive growth, enhance efficiency, and unlock new
+            opportunities. Whether you're a small startup or a large enterprise, we offer a comprehensive range of
+            services designed to support your digital transformation journey.
+
           </p>
           <a routerLink="/about" class="see-more">See more</a>
         </div>
@@ -25,7 +29,7 @@
 </div>
 
 <div class="text-center my-4">
-  <h2 class="mu-4">Our Partners</h2>
+  <h2 class="mu-4">Supported Vendors</h2>
   <app-partner></app-partner>
 </div>
 
@@ -35,11 +39,11 @@
     <h2>OUR SERVICES</h2>
     <p>WE PROVIDE A WIDE RANGE OF CAREFULLY CRAFTED SERVICES THAT CATER TO YOUR BUSINESS NEEDS. </p>
     <div class="row">
-      <div class="col-lg-4 col-md-6" *ngFor="let item of [{},{},{},{},{},{}]">
-        <div class="cart">
+      <div class="col-lg-4 col-md-6" *ngFor="let item of allServices">
+        <div class="cart" [routerLink]="'/service/'+item.id">
           <div>
-            <h4> Wireless Survey and Site Survey</h4>
-            <p>Article: Comprehensive Wireless and Site Surveys for Optimal Network Performance</p>
+            <h4> {{item.title}} </h4>
+            <p>{{item.description | slice:0:75}} ... </p>
           </div>
         </div>
       </div>

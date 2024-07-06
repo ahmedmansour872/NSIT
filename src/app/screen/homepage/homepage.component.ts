@@ -1,3 +1,4 @@
+import { ServicesService } from './../../services/services.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,5 +8,11 @@ import { Component } from '@angular/core';
 })
 
 export class HomepageComponent {
-
+  allServices: any[] = []
+  constructor(private $sev: ServicesService) { }
+  ngOnInit() {
+    this.$sev.getData().then(data => {
+      this.allServices = data.services
+    })
+  }
 }
