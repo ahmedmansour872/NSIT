@@ -14,7 +14,6 @@
 }
 
 .services {
-  background-image: url('../../../assets/images/about.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -22,7 +21,7 @@
   position: relative;
 
   .overlay {
-    background-color: rgba($color: #FFF, $alpha: 0.5);
+    background-color: rgba($color: #8D89FF, $alpha: 0.3);
     position: absolute;
     top: 0;
     left: 0;
@@ -62,6 +61,7 @@
     -moz-transition: all ease-in-out .5s;
     -ms-transition: all ease-in-out .5s;
     -o-transition: all ease-in-out .5s;
+    min-height: 150px;
 
     &:hover {
       transition: all ease-in-out .5s;
