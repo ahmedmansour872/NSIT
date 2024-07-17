@@ -1,0 +1,24 @@
+{
+  "header": {
+    "english": "English",
+    "arabic": "Arabic",
+    "home": "Home",
+    "aboutus": "About Us",
+    "services": "Services",
+    "partners": "Supported Vendors",
+    "contactus": "Contact Us"
+  },
+  "footer": {
+    "WEBSITE_TITLE": "Website",
+    "TERMS_OF_USE": "Terms of Use",
+    "PRIVACY_POLICY": "Privacy Policy",
+    "COPYRIGHT_POLICY": "Copyright Policy",
+    "SUPPORT": "Support",
+    "home": "Home",
+    "aboutus": "About Us",
+    "services": "Services",
+    "partners": "Supported Vendors",
+    "contactus": "Contact Us",
+    "COPYRIGHT_TEXT": "Copyright © 2024 NSIT. All Rights Reserved"
+  }
+}
